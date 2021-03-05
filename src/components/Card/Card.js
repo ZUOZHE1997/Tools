@@ -4,7 +4,7 @@ import {LeftOutlined} from '@ant-design/icons';
 
 function PageCard(props) {
     const backBtn = <div>
-        <Button type="text" ghost={true}
+        <Button type="text"
                 icon={<LeftOutlined/>} onClick={() => {
             props.back()
         }}>返回</Button>

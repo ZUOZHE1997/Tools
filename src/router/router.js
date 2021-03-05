@@ -3,6 +3,7 @@ import {HashRouter, Route, Switch} from 'react-router-dom';
 
 import Home from "../views/layout/index"
 import {FormatJson} from "../views/format/json";
+import {Col, Row} from "antd";
 
 const routes = [
     {

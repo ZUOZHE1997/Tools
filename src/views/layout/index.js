@@ -5,16 +5,17 @@ import "./layout.css"
 import json from "../../assets/image/json.svg"
 
 const gridStyle = {
-    width: '20  %',
+    width: '25%',
     height: '120px',
 }
 
+// 1280×1024
 function Module(props) {
     return <Card.Grid style={gridStyle} className="Home-center" onClick={() => {
         props.link()
     }}>
         <img className="Home-img" src={props.icon} alt={props.title}/>
-        <Button ghost={true} type="text">{props.title}</Button>
+        <Button  type="text">{props.title}</Button>
     </Card.Grid>
 }
 
@@ -37,6 +38,7 @@ function Home(props) {
             <Card.Grid style={gridStyle}>Content</Card.Grid>
             <Card.Grid style={gridStyle}>Content</Card.Grid>
         </Card>
+
     )
 }
 
