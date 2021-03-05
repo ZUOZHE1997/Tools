@@ -1,0 +1,10 @@
+.Home-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Home-img {
+    width: 60px;
+    height: 60px;
+}

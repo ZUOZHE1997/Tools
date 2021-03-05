@@ -1,0 +1,7 @@
+.json-content{
+    display: flex !important;
+    justify-content: space-between;
+}
+.json-textarea{
+    height: 500px;
+}
