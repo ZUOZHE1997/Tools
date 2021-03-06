@@ -6,7 +6,7 @@ import React from "react";
 function App() {
     return (
         <div className="app-content">
-            <div style={{width: '1280px'}}>
+            <div style={{width: '960px'}}>
                 <p className="app-header">⚙Tools</p>
                 <BasicRoute />
             </div>

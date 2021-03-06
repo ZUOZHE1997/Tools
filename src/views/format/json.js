@@ -19,7 +19,7 @@ export function FormatJson(props) {
     return (
         <PageCard back={() => {
             props.history.goBack()
-        }} title="JSON 格式化">
+        }} title="JSON 解析">
             <div className="json-content">
                 <div style={{width: '50%'}}>
                     <TextArea placeholder="输入内容" style={{height: "600px"}} onChange={(e) => {

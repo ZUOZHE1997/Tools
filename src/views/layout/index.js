@@ -2,7 +2,7 @@ import {Card} from 'antd'
 import {Button} from 'antd';
 import {withRouter} from 'react-router-dom'
 import "./layout.css"
-import json from "../../assets/image/json.svg"
+import {routes} from "../../router/tools";
 
 const gridStyle = {
     width: '25%',
@@ -15,7 +15,7 @@ function Module(props) {
         props.link()
     }}>
         <img className="Home-img" src={props.icon} alt={props.title}/>
-        <Button  type="text">{props.title}</Button>
+        <Button type="text">{props.title}</Button>
     </Card.Grid>
 }
 
@@ -24,21 +24,14 @@ function Home(props) {
         props.history.push(path)
     }
     return (
-        <Card title="格式化">
-            <Module title="JSON 格式化" link={() => {
-                link('/format/json')
-            }} icon={json}/>
-            <Card.Grid style={gridStyle}>Content</Card.Grid>
-            <Card.Grid style={gridStyle}>Content</Card.Grid>
-            <Card.Grid style={gridStyle}>Content</Card.Grid>
-            <Card.Grid style={gridStyle}>Content</Card.Grid>
-            <Card.Grid style={gridStyle}>Content</Card.Grid>
-            <Card.Grid style={gridStyle}>Content</Card.Grid>
-            <Card.Grid style={gridStyle}>Content</Card.Grid>
-            <Card.Grid style={gridStyle}>Content</Card.Grid>
-            <Card.Grid style={gridStyle}>Content</Card.Grid>
+        // title="工具集合1"
+        <Card>
+            {routes.map(p => {
+                return <Module title={p.title} link={() => {
+                    link(p.path)
+                }} icon={p.icon} key={p.path}/>
+            })}
         </Card>
-
     )
 }
 

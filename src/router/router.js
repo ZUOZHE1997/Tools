@@ -2,25 +2,13 @@ import React from "react";
 import {HashRouter, Route, Switch} from 'react-router-dom';
 
 import Home from "../views/layout/index"
-import {FormatJson} from "../views/format/json";
-import {Col, Row} from "antd";
+import {routes} from "./tools";
 
-const routes = [
-    {
-        path: '/',
-        title: '首页',
-        component: Home,
-    },
-    {
-        path: '/format/json',
-        title: 'JSON格式化',
-        component: FormatJson
-    }
-]
 
 const BasicRoute = () => (
     <HashRouter>
         <Switch>
+            <Route path='/' component={Home} exact />
             {routes.map(p => {
                 return <Route path={p.path} component={p.component} exact key={p.path}/>
             })}

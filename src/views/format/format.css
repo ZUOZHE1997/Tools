@@ -1,7 +1,8 @@
-.json-content{
+.json-content {
     display: flex !important;
     justify-content: space-between;
 }
-.json-textarea{
+
+.json-textarea {
     height: 500px;
 }
