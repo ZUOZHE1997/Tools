@@ -49,3 +49,4 @@ export const downloadFile = (sUrl) => {
     window.open(sUrl, '_self')
     return true
 }
+
