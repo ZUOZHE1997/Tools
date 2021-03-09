@@ -2,7 +2,7 @@ import FormatJson from "../views/format/json";
 import YouTubeImage from "../views/image/YouTube";
 import Base64 from "../views/format/base64";
 import Binary from "../views/format/binary"
-import Base64ImgConversion from "../views/format/Base64ImgConversion"
+import Base64ImgConversion from "../views/image/Base64ImgConversion"
 
 
 import json from "../assets/image/json.svg";
@@ -10,6 +10,7 @@ import YouTube from "../assets/image/Youtube.svg";
 import base64 from "../assets/image/base64.svg"
 import BinaryIcon from "../assets/image/Binary.svg"
 import Base64ImgConversionIcon from "../assets/image/img.svg"
+
 export const routes = [
     {
         path: '/format/json',

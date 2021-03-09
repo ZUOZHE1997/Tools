@@ -1,5 +1,5 @@
 import PageCard from "../../components/Card/Card"
-import "./image.css"
+import "./image.scss"
 import {Button} from 'antd';
 import {downloadFile} from "../../utils/download";
 import domtoimage from 'dom-to-image';
@@ -27,7 +27,7 @@ function YouTubeImage(props) {
     return (
         <PageCard back={() => {
             props.history.goBack()
-        }} title={title}>
+        }} title={title} >
             <div className="youtube-content">
                 <div className="youtube-content-center" id="image">
                     <div className="youtube-content-left" suppressContentEditableWarning={true}

@@ -1,0 +1,92 @@
+.youtube-content {
+  width: 100%;
+  height: 200px;
+  border: 1px solid #7dbcea;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .youtube-content-center {
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .youtube-content-left {
+    font-size: 70px;
+    font-weight: 700;
+    overflow: hidden;
+  }
+
+  .youtube-content-right {
+    overflow: hidden;
+    margin-left: 8px;
+    background-color: #d54029;
+    width: 180px;
+    border-radius: 26% 26% / 26% 26%;
+    color: #ffffff;
+    height: 120px;
+    font-size: 70px;
+    font-weight: 700;
+    text-align: center;
+  }
+}
+
+
+.youtube-content-download-btn {
+  margin-top: 20px;
+}
+
+.upload-content {
+  width: 152px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  .preview {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 4px;
+    border: 1px dashed #40a9ff;
+
+    .close-img {
+      position: absolute;
+      top: 4px;
+      right: 4px;
+      cursor: pointer;
+      color: red;
+    }
+
+    img {
+      width: 148px;
+      height: 148px;
+    }
+  }
+
+  .upload-btn {
+    width: 100%;
+
+    .input-file {
+      width: 0.1px;
+      height: 0.1px;
+      opacity: 0;
+      overflow: hidden;
+      position: absolute;
+      z-index: -1;
+    }
+  }
+}
+
+
+.show-code {
+  margin-top: 20px;
+}
+

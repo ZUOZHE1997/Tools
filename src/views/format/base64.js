@@ -1,6 +1,6 @@
 import PageCard from "../../components/Card/Card"
 import {Input, Button} from 'antd';
-import "./format.css"
+import "./format.scss"
 import {useState} from "react"
 
 const {TextArea} = Input;

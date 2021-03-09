@@ -1,5 +1,5 @@
 import PageCard from "../../components/Card/Card"
-import "./format.css"
+import "./format.scss"
 
 
 function Binary(props) {
