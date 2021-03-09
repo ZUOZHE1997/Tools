@@ -16,9 +16,11 @@
 .youtube-content-left {
     font-size: 70px;
     font-weight: 700;
+    overflow: hidden;
 }
 
 .youtube-content-right {
+    overflow: hidden;
     margin-left: 8px;
     background-color: #D54029;
     width: 180px;
@@ -28,7 +30,6 @@
     font-size: 70px;
     font-weight: 700;
     text-align: center;
-
 }
 .youtube-content-download-btn{
     margin-top: 20px;

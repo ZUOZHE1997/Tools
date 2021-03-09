@@ -6,7 +6,8 @@ import {useState} from "react"
 
 const {TextArea} = Input;
 
-export function FormatJson(props) {
+function FormatJson(props) {
+    const title = props.match.params.title
 
     const [jsonValue, setJsonValue] = useState({})
     const setInputValue = (e) => {
@@ -19,7 +20,7 @@ export function FormatJson(props) {
     return (
         <PageCard back={() => {
             props.history.goBack()
-        }} title="JSON 解析">
+        }} title={title}>
             <div className="json-content">
                 <div style={{width: '50%'}}>
                     <TextArea placeholder="输入内容" style={{height: "600px"}} onChange={(e) => {
@@ -34,3 +35,5 @@ export function FormatJson(props) {
         </PageCard>
     )
 }
+
+export default FormatJson

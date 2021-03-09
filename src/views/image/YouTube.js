@@ -5,6 +5,10 @@ import {downloadFile} from "../../utils/download";
 import domtoimage from 'dom-to-image';
 
 function YouTubeImage(props) {
+    console.log(props)
+    const title = props.match.params.title
+
+    console.log(props)
     const download = () => {
         const content = document.getElementById('image')
 
@@ -20,15 +24,18 @@ function YouTubeImage(props) {
             });
     }
 
-
     return (
         <PageCard back={() => {
             props.history.goBack()
-        }} title="YouTube 图片生成">
+        }} title={title}>
             <div className="youtube-content">
                 <div className="youtube-content-center" id="image">
-                    <div className="youtube-content-left" suppressContentEditableWarning={true} contentEditable={true}>You</div>
-                    <div className="youtube-content-right"  suppressContentEditableWarning={true} contentEditable={true}>Tube</div>
+                    <div className="youtube-content-left" suppressContentEditableWarning={true}
+                         contentEditable={true}>You
+                    </div>
+                    <div className="youtube-content-right" suppressContentEditableWarning={true}
+                         contentEditable={true}>Tube
+                    </div>
                 </div>
             </div>
             <Button onClick={() => {

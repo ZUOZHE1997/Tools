@@ -8,9 +8,9 @@ import {routes} from "./tools";
 const BasicRoute = () => (
     <HashRouter>
         <Switch>
-            <Route path='/' component={Home} exact />
+            <Route path='/' component={Home} exact/>
             {routes.map(p => {
-                return <Route path={p.path} component={p.component} exact key={p.path}/>
+                return <Route path={`${p.path}/:title`} component={p.component} exact key={p.path}/>
             })}
             {/*<Route exact path="/" component={Home}/>*/}
             {/*<Route exact path="/format/json" component={FormatJson} />*/}

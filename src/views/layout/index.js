@@ -20,15 +20,15 @@ function Module(props) {
 }
 
 function Home(props) {
-    const link = (path) => {
-        props.history.push(path)
+    const link = (path, title) => {
+        props.history.push(`${path}/${title}`)
     }
     return (
         // title="工具集合1"
         <Card>
             {routes.map(p => {
                 return <Module title={p.title} link={() => {
-                    link(p.path)
+                    link(p.path, p.title)
                 }} icon={p.icon} key={p.path}/>
             })}
         </Card>
