@@ -1,0 +1,60 @@
+#draw {
+  background-size: cover;
+  border: 1px dashed #d9d9d9;
+}
+
+.operating-btn-list {
+  position: absolute;
+  left: 0;
+  right: 0;
+  /*top: 0;*/
+  bottom: 0;
+  margin: auto;
+  width: 600px;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+}
+
+.operating-btn-list button {
+  width: 60px;
+  height: 24px;
+  font-size: 14px;
+  color: #fff;
+  background: #1890ff;
+  outline: none;
+  border: 1px solid #d9d9d9;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.operating-btn-list button:hover {
+  color: #fff;
+  background: #40a9ff;
+  border-color: #40a9ff;
+}
+
+.operating-btn-list button:active {
+  color: #fff;
+  background: #096dd9;
+  border-color: #096dd9;
+}
+
+.draw-content {
+  width: 100%;
+  height: 650px;
+  overflow: hidden;
+}
+
+.range-set {
+  display: flex;
+  flex-direction: column;
+}
+
+.people {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
