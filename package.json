@@ -2,7 +2,7 @@
   "name": "tools",
   "version": "0.1.0",
   "private": true,
-  "homepage": "/Tools/docs",
+  "homepage": "/Tools/",
   "dependencies": {
     "@ant-design/icons": "^4.5.0",
     "@testing-library/jest-dom": "^5.11.4",
