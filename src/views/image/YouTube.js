@@ -6,7 +6,7 @@ import domtoimage from 'dom-to-image';
 
 function YouTubeImage(props) {
     console.log(props)
-    const title = props.match.params.title
+    const title =props.location.query.title
 
     console.log(props)
     const download = () => {

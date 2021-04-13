@@ -6,7 +6,7 @@ import {useState} from "react"
 const {TextArea} = Input;
 
 function Base64(props) {
-    const title = props.match.params.title
+    const title =props.location.query.title
     const [inCoding, setInCoding] = useState("")
     const [outCoding, setOutCoding] = useState("")
     const coding = () => {

@@ -3,7 +3,7 @@ import "./format.scss"
 
 
 function MarkDown(props) {
-    const title = props.match.params.title
+    const title =props.location.query.title
 
     return (
         <PageCard back={() => {

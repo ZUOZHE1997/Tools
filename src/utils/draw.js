@@ -2,6 +2,7 @@ export class Draw {
   constructor(options) {
     // 获取canvas实例
     this.canvas = document.getElementById(options.element)
+    // this.canvas = options.element
     this.ctx = this.canvas.getContext('2d')
     // 初始化画笔
     this.painting = false
@@ -9,8 +10,8 @@ export class Draw {
     this.clear = false //是否亲清除
     this.history = [] // 记录
     this.lineWidth = 3 // 笔刷大小
-    this.width = options.width 
-    this.height = options.height 
+    this.width = options.width
+    this.height = options.height
   }
   // 初始化
   init() {

@@ -7,7 +7,7 @@ export function Slider(props) {
                 className="slider"
                 type="range"
                 max={props.max}
-                min={props.min}
+                min='1'
                 step="1"
                 value={props.value}
                 onInput={(e) => props.change(e)}

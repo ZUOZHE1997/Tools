@@ -19,7 +19,7 @@ const radioList = [
 ]
 
 function Binary(props) {
-    const title = props.match.params.title
+    const title =props.location.query.title
 
     const [SHI, setSHI] = useState("") // 10
     const [BA, setBA] = useState("") // 8

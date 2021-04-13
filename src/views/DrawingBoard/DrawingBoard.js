@@ -1,66 +1,57 @@
 import './draw.css'
-import { Slider } from '../../components/Slider/Slider'
-import { Draw } from '../../utils/draw'
-import { downloadBase64Img } from '../../utils/download'
-import React from 'react'
+import {Slider} from '../../components/Slider/Slider'
+import {Draw} from '../../utils/draw'
+import {downloadBase64Img} from '../../utils/download'
+import React, {useRef,useState,useEffect} from 'react'
 import PageCard from '../../components/Card/Card'
 
-class Drawing extends React.Component {
-  constructor(props) {
-    super(props)
-    this.draw = ''
-    this.state = {
-      SliderValue: 2,
-      title: props.match.params.title,
+
+function Drawing(props) {
+    console.log(props)
+    let draw = ""
+    const title =props.location.query.title
+    const [SliderValue, setSlider] = useState(2)
+    const ele = useRef(null)
+    const sliderChange = (e) => {
+        setSlider(e.target.value)
+        draw.changeLine(SliderValue)
     }
-  }
 
-  componentDidMount() {
-    this.draw = new Draw({ element: 'draw', width: 908, height: 600 })
-    this.draw.init()
-  }
+    const download = () => {
+        const img = document.getElementById('draw').toDataURL('image/png')
+        downloadBase64Img.download('image', img)
+    }
+    useEffect(() => {
+        draw = new Draw({element: 'draw', width: 908, height: 600})
+        draw.init()
+    }, [])
 
-  sliderChange(e) {
-    this.setState({ SliderValue: e.target.value })
-    this.draw.changeLine(this.state.SliderValue)
-  }
-
-  download() {
-    const img = document.getElementById('draw').toDataURL('image/png')
-    downloadBase64Img.download('image', img)
-  }
-
-  render() {
-    return (
-      <PageCard
+    return <PageCard
         back={() => {
-          this.props.history.goBack()
+            props.history.goBack()
         }}
-        title={this.state.title}
-      >
+        title={title}
+    >
         <div className="draw-content">
-          <canvas id="draw" />
-          <div className="operating-btn-list">
-            <button onClick={() => this.download()}>下载</button>
-            <button onClick={() => this.draw.checkPen()}>画笔</button>
-            <button onClick={() => this.draw.cleaning()}>橡皮擦</button>
-            <button onClick={() => this.draw.undo()}>撤销</button>
-            <button onClick={() => this.draw.reset()}>重绘</button>
-            <div className="range-set">
-              <Slider
-                change={(e) => {
-                  this.sliderChange(e)
-                }}
-                max="12"
-                min="1"
-                value={this.state.SliderValue}
-              />
+            <canvas id="draw" ref={ele}/>
+            <div className="operating-btn-list">
+                <button onClick={() => download()}>下载</button>
+                <button onClick={() => draw.checkPen()}>画笔</button>
+                <button onClick={() => draw.cleaning()}>橡皮擦</button>
+                <button onClick={() => draw.undo()}>撤销</button>
+                <button onClick={() => draw.reset()}>重绘</button>
+                <div className="range-set">
+                    <Slider
+                        change={(e) => {
+                            sliderChange(e)
+                        }}
+                        max="12"
+                        value={SliderValue}
+                    />
+                </div>
             </div>
-          </div>
         </div>
-      </PageCard>
-    )
-  }
+    </PageCard>
 }
 
 export default Drawing

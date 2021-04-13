@@ -7,7 +7,7 @@ import {useState} from "react"
 const {TextArea} = Input;
 
 function FormatJson(props) {
-    const title = props.match.params.title
+    const title =props.location.query.title
 
     const [jsonValue, setJsonValue] = useState({})
     const setInputValue = (e) => {

@@ -7,7 +7,7 @@ import {useState} from "react"
 const {TextArea} = Input;
 
 function Binary(props) {
-    const title = props.match.params.title
+    const title =props.location.query.title
     const [PreviewImg, setPreviewImg] = useState("")
     const [imgUrl, setImgUrl] = useState("")
 

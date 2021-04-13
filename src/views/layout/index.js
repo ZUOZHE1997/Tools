@@ -21,10 +21,14 @@ function Module(props) {
 
 function Home(props) {
     const link = (path, title) => {
-        props.history.push(`${path}/${title}`)
+        props.history.push({
+            pathname: path,
+            query: {
+                title: title
+            }
+        })
     }
     return (
-        // title="工具集合1"
         <Card>
             {routes.map(p => {
                 return <Module title={p.title} link={() => {
