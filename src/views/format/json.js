@@ -3,11 +3,12 @@ import {Input} from 'antd';
 import "./format.scss"
 import ReactJson from 'react-json-view'
 import {useState} from "react"
+import useTitle from "../../utils/tool";
 
 const {TextArea} = Input;
 
 function FormatJson(props) {
-    const title =props.location.query.title
+    const title = useTitle(props.match)
 
     const [jsonValue, setJsonValue] = useState({})
     const setInputValue = (e) => {

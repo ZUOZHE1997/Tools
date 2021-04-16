@@ -3,6 +3,7 @@ import "./format.scss"
 import {Input, Radio, Table} from 'antd';
 import {useState} from "react"
 import {ChangeBirany} from "../../utils/changeBirany"
+import useTitle from "../../utils/tool";
 
 const {Search} = Input
 
@@ -15,16 +16,16 @@ const radioList = [
     {content: '八进制', value: 8},
     {content: '十进制', value: 10},
     {content: '十六进制', value: 16},
-    {content: '三十二进制', value: 32}
+    // {content: '三十二进制', value: 32}
 ]
 
 function Binary(props) {
-    const title =props.location.query.title
+    const title = useTitle(props.match)
 
     const [SHI, setSHI] = useState("") // 10
     const [BA, setBA] = useState("") // 8
     const [ER, setER] = useState("") // 2
-    const [SANSHIER, setSANSHIER] = useState("") // 32
+    // const [SANSHIER, setSANSHIER] = useState("") // 32
     const [SHILIU, setSHILIU] = useState("") // 16
 
     const [conversion, setConversion] = useState("")
@@ -35,7 +36,7 @@ function Binary(props) {
         {key: 8, title: '八进制', result: BA, set: a => setBA(a)},
         {key: 10, title: '十进制', result: SHI, set: a => setSHI(a)},
         {key: 16, title: '十六进制', result: SHILIU, set: a => setSHILIU(a)},
-        {key: 32, title: '三十二进制', result: SANSHIER, set: a => setSANSHIER(a)}
+        // {key: 32, title: '三十二进制', result: SANSHIER, set: a => setSANSHIER(a)}
     ];
 
     const startConversion = () => {

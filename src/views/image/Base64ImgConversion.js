@@ -3,11 +3,12 @@ import "./image.scss"
 import {Button, Input} from 'antd';
 import {ArrowUpOutlined, CloseCircleOutlined, PlusOutlined} from '@ant-design/icons';
 import {useState} from "react"
+import useTitle from "../../utils/tool";
 
 const {TextArea} = Input;
 
 function Binary(props) {
-    const title =props.location.query.title
+    const title = useTitle(props.match)
     const [PreviewImg, setPreviewImg] = useState("")
     const [imgUrl, setImgUrl] = useState("")
 

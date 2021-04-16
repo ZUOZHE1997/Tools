@@ -3,10 +3,11 @@ import "./image.scss"
 import {Button} from 'antd';
 import {downloadFile} from "../../utils/download";
 import domtoimage from 'dom-to-image';
+import useTitle from "../../utils/tool";
 
 function YouTubeImage(props) {
     console.log(props)
-    const title =props.location.query.title
+    const title = useTitle(props.match)
 
     console.log(props)
     const download = () => {

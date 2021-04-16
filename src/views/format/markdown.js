@@ -1,15 +1,42 @@
 import PageCard from "../../components/Card/Card"
 import "./format.scss"
+import {useState} from "react";
+import MarkdownIt from 'markdown-it'
+import MdEditor from 'react-markdown-editor-lite'
+import 'react-markdown-editor-lite/lib/index.css';
+import { Button } from 'antd';
+import useTitle from "../../utils/tool";
+import {downloadFile} from "../../utils/download";
+
+// const marked = require("marked");
+// const html = marked('# Marked in Node.js\n\nRendered by **marked**.');
 
 
 function MarkDown(props) {
-    const title =props.location.query.title
+    console.log(props)
+    const title = useTitle(props.match)
+    let mdParser = new MarkdownIt();
 
+    const [content, setContent] = useState("")
+
+    const handleEditorChange = ({html, text}) => {
+        setContent(html)
+        console.log(html, text)
+    }
     return (
         <PageCard back={() => {
             props.history.goBack()
         }} title={title}>
-            阿斯达
+            <div>
+                {/*<Button type="text" >导出 PDF </Button>*/}
+                {/*<Button type="text" onClick={()=>{downloadFile(content)}}>导出 HTML </Button>*/}
+                {/*<Button type="text">下载</Button>*/}
+            </div>
+            <MdEditor
+                style={{height: "700px"}}
+                renderHTML={(text) => mdParser.render(text)}
+                onChange={handleEditorChange}
+            />
         </PageCard>
     )
 }

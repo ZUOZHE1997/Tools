@@ -2,14 +2,15 @@ import './draw.css'
 import {Slider} from '../../components/Slider/Slider'
 import {Draw} from '../../utils/draw'
 import {downloadBase64Img} from '../../utils/download'
-import React, {useRef,useState,useEffect} from 'react'
+import React, {useRef, useState, useEffect} from 'react'
 import PageCard from '../../components/Card/Card'
+import useTitle from "../../utils/tool";
 
 
 function Drawing(props) {
     console.log(props)
     let draw = ""
-    const title =props.location.query.title
+    const title = useTitle(props.match)
     const [SliderValue, setSlider] = useState(2)
     const ele = useRef(null)
     const sliderChange = (e) => {

@@ -1,12 +1,13 @@
 import PageCard from "../../components/Card/Card"
 import {Input, Button} from 'antd';
-import "./format.scss"
+import "./index.scss"
 import {useState} from "react"
+import useTitle from "../../utils/tool";
 
 const {TextArea} = Input;
 
 function Base64(props) {
-    const title =props.location.query.title
+    const title = useTitle(props.match)
     const [inCoding, setInCoding] = useState("")
     const [outCoding, setOutCoding] = useState("")
     const coding = () => {
@@ -38,7 +39,6 @@ function Base64(props) {
                           value={outCoding}
                 />
             </div>
-
             <Button onClick={() => {
                 coding()
             }} className="base64-btn" type="primary">编码</Button>

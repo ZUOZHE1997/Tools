@@ -1,10 +1,11 @@
 import FormatJson from "../views/format/json";
 import YouTubeImage from "../views/image/YouTube";
-import Base64 from "../views/format/base64";
+import Base64 from "../views/code/base64";
 import Binary from "../views/format/binary"
 import Base64ImgConversion from "../views/image/Base64ImgConversion"
-// import MarkDown from "../views/format/markdown";
+import MarkDown from "../views/format/markdown";
 import Drawing from "../views/DrawingBoard/DrawingBoard"
+import Download from "../views/code/download"
 
 import json from "../assets/image/json.svg";
 import YouTube from "../assets/image/Youtube.svg";
@@ -12,7 +13,8 @@ import base64 from "../assets/image/base64.svg"
 import BinaryIcon from "../assets/image/Binary.svg"
 import Base64ImgConversionIcon from "../assets/image/img.svg"
 import pen from '../assets/image/pen.svg'
-// import markdownIcon from "../assets/image/markdown.svg"
+import markdownIcon from "../assets/image/markdown.svg"
+import DownloadIcon from "../assets/image/Download.svg"
 
 export const routes = [
     {
@@ -47,12 +49,17 @@ export const routes = [
         title: '画板工具',
         component: Drawing,
         icon: pen
+    },
+    {
+        path: '/MarkDown',
+        title: 'MarkDown 转换HTML',
+        component: MarkDown,
+        icon: markdownIcon
+    },{
+        path: '/Download',
+        title: '常见下载方式',
+        component: Download,
+        icon: DownloadIcon
     }
-    // , {
-    //     path: '/MarkDown',
-    //     title: 'MarkDown 编辑器',
-    //     component: MarkDown,
-    //     icon: markdownIcon
-    // }
 ]
 
