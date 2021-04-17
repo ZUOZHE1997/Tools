@@ -1,12 +1,10 @@
 import PageCard from "../../components/Card/Card"
-import "./format.scss"
-import {useState} from "react";
+import "../other/format.scss"
+// import {useState} from "react";
 import MarkdownIt from 'markdown-it'
 import MdEditor from 'react-markdown-editor-lite'
 import 'react-markdown-editor-lite/lib/index.css';
-import { Button } from 'antd';
 import useTitle from "../../utils/tool";
-import {downloadFile} from "../../utils/download";
 
 // const marked = require("marked");
 // const html = marked('# Marked in Node.js\n\nRendered by **marked**.');
@@ -17,10 +15,10 @@ function MarkDown(props) {
     const title = useTitle(props.match)
     let mdParser = new MarkdownIt();
 
-    const [content, setContent] = useState("")
+    // const [content, setContent] = useState("")
 
     const handleEditorChange = ({html, text}) => {
-        setContent(html)
+        // setContent(html)
         console.log(html, text)
     }
     return (

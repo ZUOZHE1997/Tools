@@ -75,9 +75,7 @@ function Download(props) {
                     </code>
                 </pre>
                     </Panel>
-
                 </Collapse>,
-
             </div>
         </PageCard>
     )

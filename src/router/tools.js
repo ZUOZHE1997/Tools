@@ -1,11 +1,11 @@
-import FormatJson from "../views/format/json";
+import FormatJson from "../views/programming/json";
 import YouTubeImage from "../views/image/YouTube";
-import Base64 from "../views/code/base64";
-import Binary from "../views/format/binary"
+import Base64 from "../views/programming/base64";
+import Binary from "../views/other/binary"
 import Base64ImgConversion from "../views/image/Base64ImgConversion"
-import MarkDown from "../views/format/markdown";
+import MarkDown from "../views/programming/markdown";
 import Drawing from "../views/DrawingBoard/DrawingBoard"
-import Download from "../views/code/download"
+import Download from "../views/programming/download"
 
 import json from "../assets/image/json.svg";
 import YouTube from "../assets/image/Youtube.svg";

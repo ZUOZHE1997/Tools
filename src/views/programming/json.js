@@ -1,6 +1,6 @@
 import PageCard from "../../components/Card/Card"
 import {Input} from 'antd';
-import "./format.scss"
+import "../other/format.scss"
 import ReactJson from 'react-json-view'
 import {useState} from "react"
 import useTitle from "../../utils/tool";

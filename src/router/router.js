@@ -1,16 +1,18 @@
 import React from "react";
 import {HashRouter, Route, Switch} from 'react-router-dom';
+import {routers} from "./all";
 
 import Home from "../views/layout/index"
-import {routes} from "./tools";
 
 
 const BasicRoute = () => (
     <HashRouter>
         <Switch>
             <Route path='/' component={Home} exact/>
-            {routes.map(p => {
-                return <Route path={`${p.path}:title`} component={p.component} exact key={p.path}/>
+            {routers.map(p => {
+                return p.children.map(k => {
+                    return <Route path={`${k.path}:title`} component={k.component} exact key={k.path}/>
+                })
             })}
             {/*<Route exact path="/" component={Home}/>*/}
             {/*<Route exact path="/format/json" component={FormatJson} />*/}

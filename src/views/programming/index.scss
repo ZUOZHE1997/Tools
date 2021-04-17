@@ -36,3 +36,22 @@
   }
 }
 
+.json-content {
+  display: flex !important;
+  justify-content: space-between;
+
+  .json-textarea {
+    height: 500px;
+  }
+}
+
+
+
+.markdown-layout{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .between-width{
+    width: 49%;
+  }
+}
