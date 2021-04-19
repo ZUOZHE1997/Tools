@@ -3,12 +3,12 @@ import BasicRoute from "./router/router";
 import React from "react";
 
 
-function App () {
+function App() {
     return (
         <div className="app-content">
-            <div style={{ width: '1280px' }}>
+            <div style={{width: '1280px'}}>
                 <p className="app-header">⚙Tools</p>
-                <BasicRoute />
+                <BasicRoute/>
             </div>
         </div>
     )

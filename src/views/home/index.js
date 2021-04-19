@@ -8,31 +8,23 @@ const gridStyle = {
     height: '80px',
 }
 
-// 1280×1024
-function Module(props) {
-    return <Card.Grid style={gridStyle} className="Home-center" onClick={() => {
-        props.link()
-    }}>
-        <img className="Home-img" src={props.icon} alt={props.title}/>
-        <Button type="text">{props.title}</Button>
-    </Card.Grid>
-}
-
 function Home(props) {
     const link = (path, title) => {
         props.history.push(`${path}${title}`)
     }
     return (
         routers.map(k => {
-            return <Card key={k.title}>
+            return <Card key={k.title} title={k.title} style={{marginBottom:"20px"}}>
                 {k.children.map(p => {
-                    return <Module title={p.title} link={() => {
+                    return <Card.Grid className="Home-center" style={gridStyle} onClick={() => {
                         link(p.path, p.title)
-                    }} icon={p.icon} key={p.path}/>
+                    }} key={p.title}>
+                        <img className="Home-img" src={p.icon} alt={p.title}/>
+                        <Button type="text">{p.title}</Button>
+                    </Card.Grid>
                 })}
             </Card>
         })
-
     )
 }
 

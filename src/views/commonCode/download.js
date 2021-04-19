@@ -8,7 +8,7 @@ import downloadImg from "../../assets/other/download.jpg"
 import downloadPdf from "../../assets/other/download.pdf"
 import downloadExcel from "../../assets/other/download.xlsx"
 import {downloadFile} from "../../utils/download";
-import {downloadTxt} from "./download.txt"
+import {downloadTxt} from "../programming/download.txt"
 
 const {Panel} = Collapse;
 

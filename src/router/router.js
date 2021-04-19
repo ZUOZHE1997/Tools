@@ -2,7 +2,7 @@ import React from "react";
 import {HashRouter, Route, Switch} from 'react-router-dom';
 import {routers} from "./all";
 
-import Home from "../views/layout/index"
+import Home from "../views/home/index"
 
 
 const BasicRoute = () => (

@@ -3,18 +3,16 @@ import Base64 from "../views/programming/base64";
 import Binary from "../views/other/binary"
 import MarkDown from "../views/programming/markdown";
 import Drawing from "../views/DrawingBoard/DrawingBoard"
-import Download from "../views/programming/download"
 
 import json from "../assets/image/json.svg";
 import base64 from "../assets/image/base64.svg"
 import BinaryIcon from "../assets/image/Binary.svg"
 import pen from '../assets/image/pen.svg'
 import markdownIcon from "../assets/image/markdown.svg"
-import DownloadIcon from "../assets/image/Download.svg"
 
 export const codding = {
-    title:"编程工具",
-    children:[
+    title: "编程工具",
+    children: [
         {
             path: '/format/json',
             title: 'JSON解析',
@@ -40,14 +38,9 @@ export const codding = {
         },
         {
             path: '/MarkDown',
-            title: 'MarkDown 转换HTML',
+            title: 'MarkDown 在线编辑',
             component: MarkDown,
             icon: markdownIcon
-        },{
-            path: '/Download',
-            title: '常见下载方式',
-            component: Download,
-            icon: DownloadIcon
         }
     ]
 }
