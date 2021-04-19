@@ -46,12 +46,17 @@
 }
 
 
-
-.markdown-layout{
+.markdown-layout {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  .between-width{
+
+  .between-width {
     width: 49%;
   }
+}
+
+.language-dropdown {
+  display: inline-block;
+  margin-bottom: 10px;
 }

@@ -3,12 +3,14 @@ import Base64 from "../views/programming/base64";
 import Binary from "../views/other/binary"
 import MarkDown from "../views/programming/markdown";
 import Drawing from "../views/DrawingBoard/DrawingBoard"
+import CodeEditor from "../views/programming/codeEditor";
 
 import json from "../assets/image/json.svg";
 import base64 from "../assets/image/base64.svg"
 import BinaryIcon from "../assets/image/Binary.svg"
 import pen from '../assets/image/pen.svg'
 import markdownIcon from "../assets/image/markdown.svg"
+import codeEditorIcon from "../assets/image/codeEditor.svg"
 
 export const codding = {
     title: "编程工具",
@@ -41,7 +43,14 @@ export const codding = {
             title: 'MarkDown 在线编辑',
             component: MarkDown,
             icon: markdownIcon
+        },
+        {
+            path: '/CodeEditor',
+            title: '代码编辑器',
+            component: CodeEditor,
+            icon: codeEditorIcon
         }
+
     ]
 }
 

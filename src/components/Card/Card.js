@@ -12,7 +12,7 @@ function PageCard(props) {
     </div>
 
     return (
-        <Card title={backBtn} style={{width: '100%', marginTop: 0}} className="Card-content">
+        <Card title={backBtn} style={{width: '100%', marginTop: 0,position: "relative"}} className="Card-content">
             {props.children}
         </Card>
     )
